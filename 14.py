@@ -14,23 +14,11 @@
 # zeros(12) = 2
 # # 12! = 479001600 --> 2 trailing zeros
 
-
-
 def zeros(n):
-    if n > 0:
-        spam = list(range(1, n+1))
-        factorial = spam[0] * spam[1]
-        i = 1
-        zeros = 0
-        while i != n-1:
-            factorial = factorial * spam[i + 1]
-            # print(factorial)
-            i += 1
-        while factorial % 10 < 1:
-            zeros += 1
-            factorial = factorial / 10
-    else:
-        zeros = 0
-    return zeros
+    zero = 0
+    while(n >= 5):
+        n //= 5
+        zero += n
+    return zero
 
 print(zeros(30))
