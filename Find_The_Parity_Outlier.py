@@ -23,15 +23,19 @@ def find_outlier(integers):
     else:
         even = 0
     
-    i = 0
+    # i = 0
     
     if even == 1:
-        while i < len(integers):
-            if integers[i] % 2 != 0:
-                return integers[i] 
-            else: 
-                i += 1
+        # while i < len(integers):
+        #     if integers[i] % 2 != 0:
+        #         return integers[i] 
+        #     else: 
+        #         i += 1
+        for i, v in enumerate(integers):
+            if integers[v] % 2 != 0:
+                return integers[v]
     else:
+        i = 0
         while i < len(integers):
             if integers[i] % 2 == 0:
                 return integers[i]
